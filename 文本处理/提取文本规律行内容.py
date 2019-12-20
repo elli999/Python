@@ -1,14 +1,14 @@
 # -*- coding:utf-8 -*-
 
-# 需求：读取文件中的2、6、10、14... 行内容并写入新文件
+# 需求：读取文件中的3、7、11、15... 行内容并写入新文件
 # 下面是方法一
 
 input_file = open(r"./text1/source.srt", 'r', encoding='utf-8')
-output_file = open(r"./text1/EK_out.txt", 'w', encoding='utf-8')
+output_file = open(r"./text1/output.txt", 'w', encoding='utf-8')
 
 line_list = input_file.readlines()
 
-# output_text 为测试变量，只在程序内的结果输出
+# output_text 为测试变量，只在程序内的结果输出（调试用）
 output_text = ''
 
 n = 1
@@ -22,10 +22,10 @@ while True:
         break
     n += 1
 
-
+# （调试用）
 print(output_text)
 
-# 看看列表中有多少个element
+# 看看列表中有多少个element（调试用）
 print(len(line_list))
 
 input_file.close()
